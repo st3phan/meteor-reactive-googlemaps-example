@@ -1,0 +1,19 @@
+<head>
+  <title>Reactive Google Maps with Meteor</title>
+</head>
+
+<body>
+  <h1>Reactive Google Maps with Meteor</h1>
+  {{> map}}
+</body>
+
+<template name="map">
+    <div class="map">
+        {{> googleMap name="map" options=mapOptions}}
+    </div>
+    <div class="places">
+        {{#each places}}
+            <li>{{name}}</li>
+        {{/each}}
+    </div>
+</template>
